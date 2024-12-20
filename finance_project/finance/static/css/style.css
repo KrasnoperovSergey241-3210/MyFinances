@@ -1,0 +1,332 @@
+
+.barlow-thin {
+    font-family: "Barlow", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .barlow-extralight {
+    font-family: "Barlow", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .barlow-light {
+    font-family: "Barlow", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .barlow-regular {
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .barlow-medium {
+    font-family: "Barlow", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .barlow-semibold {
+    font-family: "Barlow", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .barlow-bold {
+    font-family: "Barlow", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .barlow-extrabold {
+    font-family: "Barlow", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .barlow-black {
+    font-family: "Barlow", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .barlow-thin-italic {
+    font-family: "Barlow", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .barlow-extralight-italic {
+    font-family: "Barlow", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .barlow-light-italic {
+    font-family: "Barlow", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .barlow-regular-italic {
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .barlow-medium-italic {
+    font-family: "Barlow", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .barlow-semibold-italic {
+    font-family: "Barlow", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .barlow-bold-italic {
+    font-family: "Barlow", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .barlow-extrabold-italic {
+    font-family: "Barlow", serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .barlow-black-italic {
+    font-family: "Barlow", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+:root{
+    font-size: 62.5%;
+    background-color: #DFF2E3;
+    --F:"Barlow", sans-serif;
+
+    font-family: var(--F);
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header{
+    margin: 0 1rem;
+    background: linear-gradient(#2BA84A, #1E6F37);
+    border-radius: 3rem;
+    padding: 1rem;
+}
+
+.header__wrapper{
+    
+}
+
+.header h2{
+    font-size: 3rem;
+    margin: 0 0 0 0;
+    color: white;
+    align-self: center;
+    margin: 0 0 0 1rem;
+}
+
+.centre{
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 4rem;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.income__wrapper{
+    background: linear-gradient(#2BA84A, #1E6F37);
+    padding: 1rem;
+    border-radius: 3rem;
+    max-width: 60rem;
+    min-width: 53.2rem;
+
+}
+
+.income__wrapper h3{
+    color: white;
+    font-size: 2rem;
+}
+
+.income__wrapper ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.expense__wrapper{
+    background: linear-gradient(#2BA84A, #1E6F37);
+    padding: 1rem;
+    border-radius: 3rem;
+    max-width: 60rem;
+    min-width: 53.2rem;
+}
+
+.expense__wrapper h3{
+    color: white;
+    font-size: 2rem;
+}
+
+.expense__wrapper ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.total__wrapper{
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.total{
+    min-width: 30rem;
+    padding: 1rem;
+    border-radius: 3rem;
+    background: linear-gradient(#2BA84A, #1E6F37);
+    text-align: center;
+}
+
+.total__wrapper h3{
+    color: white;
+    font-size: 2rem;
+}
+
+.total__wrapper ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.form{
+    min-width: 30rem;
+    padding: 1rem;
+    border-radius: 3rem;
+    /* background: linear-gradient(#2BA84A, #1E6F37); */
+    text-align: center;
+    border: 0.1rem solid black;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form h3{
+    /* color: white; */
+    color: black;
+    font-size: 3rem;
+}
+
+.form-group label{
+    /* color: white; */
+    font-size: 3rem;
+}
+
+input, select{
+    height: 3rem;
+}
+
+.form button{
+    width: 60%;
+    height: 5rem;
+    margin: 2rem auto;
+    border-radius: 2rem;
+    background: linear-gradient(#2BA84A, #1E6F37);
+    color: white;
+}
+
+.main__reg{
+    margin: 2rem auto;
+    max-width: 40rem;
+    text-align: center;
+
+}
+
+.helptext{
+    display: none;
+}
+
+.main__reg h2{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.main__reg label{
+    font-size: 3rem;
+}
+
+.main__reg button{
+    width: 60%;
+    height: 5rem;
+    margin: 2rem auto;
+    border-radius: 2rem;
+    background: linear-gradient(#2BA84A, #1E6F37);
+    color: white;
+}
+
+.wrapper__log{
+    margin: 2rem auto;
+    max-width: 40rem;
+    text-align: center;
+}
+
+.wrapper__log label{
+    font-size: 3rem;
+}
+
+.wrapper__log h2{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.wrapper__log button{
+    width: 60%;
+    height: 5rem;
+    margin: 2rem auto;
+    border-radius: 2rem;
+    background: linear-gradient(#2BA84A, #1E6F37);
+    color: white;
+}
+
+button:hover{
+    background: linear-gradient(#FF6F00, #8a3c00);
+
+}

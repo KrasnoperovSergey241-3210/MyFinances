@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <h2>Finance</h2>
+        </div>
+    </header>
+
+    <h2 class="centre">Ваши транзакции</h2>
+
+    <div class="wrapper">
+    
+        <!-- Колонка 1: Доходы -->
+        <div class="income__wrapper">
+            <h3>Доходы</h3>
+            <ul>
+                {% for transaction in income_transactions %}
+                    <li>
+                        <strong>Источник:</strong> {{ transaction.name }} |
+                        <strong>Сумма:</strong> {{ transaction.amount }} |
+                        <strong>Дата добавления:</strong> {{ transaction.date }}
+                    </li>
+                {% empty %}
+                    <li>Нет доходов.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    
+        <!-- Колонка 2: Расходы -->
+        <div class="expense__wrapper">
+            <h3>Расходы</h3>
+            <ul>
+                {% for transaction in expense_transactions %}
+                    <li>
+                        <strong>Название:</strong> {{ transaction.name }} |
+                        <strong>Сумма:</strong> {{ transaction.amount }} |
+                        <strong>Дата:</strong> {{ transaction.date }}
+                    </li>
+                {% empty %}
+                    <li>Нет расходов.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    
+        <!-- Колонка 3: Разница и форма добавления транзакции -->
+        <div class="total__wrapper">
+            <div class="total">
+                
+                <ul>
+                    <li><strong>Общий доход:</strong> {{ total_income }}</li>
+                    <li><strong>Общие расходы:</strong> {{ total_expense }}</li>
+                    <li><strong>Баланс:</strong> {{ balance }}</li>
+                </ul>
+            </div>
+    
+            <div class="form">
+                <h3>Добавить транзакцию</h3>
+                <form method="POST" class="form-container">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="{{ form.operation_type.id_for_label }}" class="operation">Тип операции</label>
+                        {{ form.operation_type }}
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="{{ form.name.id_for_label }}">Название</label>
+                        {{ form.name }}
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="{{ form.amount.id_for_label }}">Сумма</label>
+                        {{ form.amount }}
+                    </div>
+                
+                
+                
+                    <button type="submit">Добавить</button>
+                </form>
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>
